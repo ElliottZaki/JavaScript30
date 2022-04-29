@@ -71,8 +71,7 @@
 
     function removeTransition(e) {
       if (e.propertyName !== 'transform') return; //skips if it not a transform, as there are numerous transitions taking place.
-      console.log(this);
-      this.classList.remove('playing');
+      this.classList.remove('playing'); // In this case, 'this' represents key below. this would be whatever is called with the eventListener.
     }
 
     const keys = document.querySelectorAll('.key');
